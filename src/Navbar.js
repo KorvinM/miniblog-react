@@ -8,7 +8,6 @@ const Nav = () => {
       <h1>React Blog</h1>
       <ul className="flx">
         <li><Link to= "/">Home</Link></li>
-        <li></li>
         <li><Link to="/create">Create</Link></li>
       </ul>
     </nav>

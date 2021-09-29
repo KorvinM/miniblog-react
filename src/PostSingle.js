@@ -18,7 +18,7 @@ const PostSingle=  () =>{
     {isPending && <div className="loading">Loading...</div>}
     {error && <div className="error">{error}</div>}
     {post && (
-      <article>
+      <article className= {post.cat}>
         <h2><span className="posttitle">{post.title}</span></h2>
         <div className="postmeta flx">
           <span className="postcat">Categorised: {post.cat}</span>

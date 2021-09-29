@@ -3,6 +3,7 @@
   background-color: #eae6e9;}
 
 .App-logo {
+  align-self: center;
   color: cyan;
   height: 6.2vmin;
   pointer-events: none;}
@@ -12,26 +13,24 @@
     animation: spin infinite 3.3s linear;}}
 
 .App-header {
+  padding-left:2em;
   line-height: 1;
   background-color: #3a3439;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(0.6em + 2vmin);
   color: white;}
 
 .App-link {
   color: #61dafb;}
 
 .navbar{
-  align-items: baseline;
-  justify-content: center;
   width: 100%;}
 
 .navbar ul{
     list-style: none;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
     justify-content: space-around;}
-
-.navbar li{
-  padding: 0 10px;
-  margin-left: auto;}
 
 .navbar a{
   text-decoration: none;
@@ -68,7 +67,7 @@ main a:hover{
   flex-direction: row-reverse;}
 
 .post-preview{
-  background-color: rgba(252,246,252,0.4);
+  background-color: rgba(255,248,254,0.4);
   min-width: 37%;
   flex: 1;
   color: #3a3439;
@@ -87,13 +86,17 @@ main a:hover{
   text-align: left;}
 
 .post-single article>div{
-  max-width: 40em;
   margin-bottom: 0.678em;}
 
 .post-single .postmeta{
-  align-items: baseline;
-  justify-content: space-between;}
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 16px;}
 
+.post-single article.status .postbody{
+  text-align: center;
+  font-size: 1.6em;
+}
 .create form{
   max-width: 40em;
   text-align:left;
@@ -132,3 +135,26 @@ main a:hover{
     transform: scale(0.6, 0.4) rotate(-12deg) scale3d(0.1, 0.6, 1);}
   to {
     transform: scale(1, 1) rotate(0deg) scale3d(1, 1, 3);}}
+
+/* media queries */
+
+
+@media screen and (min-width: 30em){
+
+  .App-header {
+    padding-left:0;}
+
+  .navbar{
+    align-items: baseline;
+    justify-content: center;}
+
+  .navbar ul{
+    flex-direction: row;
+    justify-content: space-between;}
+
+}
+
+@media screen and (min-width: 42em){
+  .post-single article.essay .postbody{
+    columns: 2;}
+}
